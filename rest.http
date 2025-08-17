@@ -1,0 +1,2 @@
+### Check Payment Status
+GET https://api.infinitepay.io/invoices/public/checkout/payment_check/lecorsaireballet?external_order_nsu=123456

@@ -1,474 +1,253 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clássicos da Disney - Espetáculo de Ballet Infantil</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia de Ballet Sonhos em Ponta</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font Awesome for Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <style>
-      /* Estilos personalizados para integrar as Fontes do Google */
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #f0f4f8; /* Fundo azul claro */
-      }
-      .font-title {
-        font-family: "Great Vibes", cursive;
-      }
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-      /* Keyframes para o fundo animado */
-      @keyframes zoomIn {
-        from {
-          transform: scale(1);
-        }
-        to {
-          transform: scale(1.1);
-        }
-      }
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #FFF8F9;
+      /* Rosa muito claro */
+    }
 
-      .hero-bg {
-        /* Imagem fornecida pelo usuário */
-        background-image: url("./images/fundo.png");
-        background-size: cover;
-        background-position: center;
-        /* Aplicando a animação */
-        animation: zoomIn 20s ease-in-out infinite alternate;
-      }
-      .btn-magic {
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      }
-      .btn-magic:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-      }
-      .faq-item .faq-answer {
-        display: none;
-        transition: max-height 0.3s ease-in-out;
-      }
-      .faq-item.open .faq-answer {
-        display: block;
-      }
-      .faq-item.open .icon-plus {
-        transform: rotate(45deg);
-      }
-    </style>
-  </head>
-  <body class="text-gray-800">
-    <!-- Secção Principal -->
-    <header
-      id="home"
-      class="hero-bg text-white relative min-h-screen flex items-center justify-center overflow-hidden"
-    >
-      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-      <div class="relative z-10 text-center p-6">
-        <h1
-          class="font-title text-6xl md:text-8xl lg:text-9xl text-white"
-          style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7)"
-        >
-          LeCorsaire Ballet - Clássicos da Disney
-        </h1>
-        <p
-          class="mt-4 text-lg md:text-2xl max-w-2xl mx-auto"
-          style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8)"
-        >
-          A magia dos seus contos de fadas favoritos, contada através da
-          graciosidade do ballet. Um espetáculo para toda a família!
-        </p>
-        <a
-          href="#tickets"
-          class="btn-magic mt-8 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-full text-xl uppercase tracking-wider"
-        >
-          Garanta seu Ingresso
-        </a>
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .hero-bg {
+      background-image: url('https://images.pexels.com/photos/277477/pexels-photo-277477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .nav-link {
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #DB2777;
+      /* Rosa choque */
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+
+  <!-- Navegação -->
+  <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="#home" class="font-serif text-2xl font-bold text-pink-800">Sonhos em Ponta</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="nav-link text-gray-700">Sobre Nós</a>
+        <a href="#classes" class="nav-link text-gray-700">Aulas</a>
+        <a href="#schedule" class="nav-link text-gray-700">Horários</a>
+        <a href="#contact" class="nav-link text-gray-700">Contato</a>
       </div>
-    </header>
+      <a href="#contact" class="hidden md:block bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-6 rounded-full transition-colors">
+        Inscreva-se
+      </a>
+      <button id="mobile-menu-button" class="md:hidden text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+      <a href="#about" class="block nav-link text-gray-700">Sobre Nós</a>
+      <a href="#classes" class="block nav-link text-gray-700">Aulas</a>
+      <a href="#schedule" class="block nav-link text-gray-700">Horários</a>
+      <a href="#contact" class="block nav-link text-gray-700">Contato</a>
+      <a href="#contact" class="mt-2 block bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-6 rounded-full transition-colors text-center">
+        Inscreva-se
+      </a>
+    </div>
+  </nav>
 
-    <!-- Conteúdo Principal -->
-    <main>
-      <!-- Secção Sobre -->
-      <section id="about" class="py-20 px-6 bg-white">
-        <div class="container mx-auto text-center max-w-4xl">
-          <h2 class="font-title text-5xl md:text-6xl text-blue-800 mb-6">
-            Um Conto de Fadas no Palco
-          </h2>
-          <p class="text-lg text-gray-600 mb-8">
-            Embarque numa viagem encantada pelos mundos de Cinderela, A Bela e a
-            Fera, A Pequena Sereia e muitos outros. Uma produção deslumbrante,
-            com figurinos icónicos e o talento de nossos jovens bailarinos, ao
-            som das inesquecíveis canções da Disney.
-          </p>
-          <div
-            class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 text-blue-700 mb-12"
-          >
-            <div class="flex items-center space-x-3">
-              <i class="fas fa-calendar-alt fa-2x"></i>
-              <span class="text-xl font-semibold">15 de Novembro</span>
-            </div>
-            <div class="flex items-center space-x-3">
-              <i class="fas fa-clock fa-2x"></i>
-              <span class="text-xl font-semibold">Sáb às 16h </span>
-            </div>
-            <div class="flex items-center space-x-3">
-              <i class="fas fa-map-marker-alt fa-2x"></i>
-              <span class="text-xl font-semibold">Teatro Barreto Júnior</span>
-            </div>
-          </div>
+  <!-- Secção Principal (Hero) -->
+  <header id="home" class="hero-bg text-white relative min-h-[80vh] flex items-center">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="relative z-10 container mx-auto px-6">
+      <h1 class="font-serif text-4xl md:text-6xl font-bold max-w-2xl">Onde a paixão pela dança ganha vida.</h1>
+      <p class="mt-4 text-lg max-w-lg">Descubra a arte, a disciplina e a alegria do ballet na nossa academia. Aulas para todas as idades e níveis.</p>
+      <a href="#classes" class="mt-8 inline-block bg-white hover:bg-gray-200 text-pink-700 font-bold py-3 px-8 rounded-full text-lg transition-colors">
+        Conheça Nossas Aulas
+      </a>
+    </div>
+  </header>
 
-          <!-- Google Maps Embed -->
-          <div
-            class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-xl"
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7900.213428092797!2d-34.88649172410916!3d-8.090598991937965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1f4000a3ee7b%3A0x726bddf1f0711346!2sTeatro%20Barreto%20J%C3%BAnior!5e0!3m2!1spt-BR!2sbr!4v1753323869530!5m2!1spt-BR!2sbr"
-              width="100%"
-              height="100%"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            >
-            </iframe>
-          </div>
+  <!-- Conteúdo Principal -->
+  <main>
+    <!-- Secção Sobre Nós -->
+    <section id="about" class="py-20 px-6 bg-white">
+      <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="https://images.pexels.com/photos/209948/pexels-photo-209948.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="w-full h-full object-cover">
         </div>
-      </section>
-
-      <!-- Secção do Temporizador -->
-      <section class="py-12 bg-blue-100">
-        <div class="container mx-auto text-center">
-          <h3 class="font-title text-4xl text-blue-800 mb-4">
-            A Magia Começa em...
-          </h3>
-          <div
-            id="countdown"
-            class="flex justify-center space-x-4 md:space-x-8 text-blue-900"
-          >
-            <div>
-              <span id="days" class="text-4xl md:text-6xl font-bold"></span>
-              <span class="block text-sm">Dias</span>
-            </div>
-            <div>
-              <span id="hours" class="text-4xl md:text-6xl font-bold"></span>
-              <span class="block text-sm">Horas</span>
-            </div>
-            <div>
-              <span id="minutes" class="text-4xl md:text-6xl font-bold"></span>
-              <span class="block text-sm">Minutos</span>
-            </div>
-            <div>
-              <span id="seconds" class="text-4xl md:text-6xl font-bold"></span>
-              <span class="block text-sm">Segundos</span>
-            </div>
-          </div>
+        <div>
+          <h2 class="font-serif text-4xl font-bold text-pink-800 mb-6">Nossa Academia</h2>
+          <p class="text-gray-600 mb-4">Fundada em 2010, a Academia Sonhos em Ponta dedica-se a oferecer um ensino de ballet de excelência, num ambiente acolhedor e inspirador. A nossa missão é nutrir o talento de cada aluno, promovendo a autoconfiança, a disciplina e o amor pela arte da dança.</p>
+          <p class="text-gray-600">Acreditamos que o ballet é para todos. Com uma equipa de professores dedicados e uma metodologia que equilibra técnica e expressão, guiamos os nossos alunos em cada passo da sua jornada na dança.</p>
         </div>
-      </section>
-
-      <!-- Secção da Galeria -->
-      <section id="gallery" class="py-20 px-6 bg-white">
-        <div class="container mx-auto">
-          <h2
-            class="font-title text-5xl md:text-6xl text-center text-blue-800 mb-12"
-          >
-            Momentos Mágicos
-          </h2>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div
-              class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
-            >
-              <img
-                src="./images/cinderela.png"
-                alt="Bailarina em cena como Cinderela"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div
-              class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
-            >
-              <img
-                src="./images/bela.png"
-                alt="Cena do ballet A Bela e a Fera"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div
-              class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
-            >
-              <img
-                src="./images/ariel.png"
-                alt="Detalhe do figurino da Pequena Sereia"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div
-              class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
-            >
-              <img
-                src="./images/princesas.png"
-                alt="Grupo de bailarinos em cena"
-                class="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Secção de Bilhetes -->
-      <section id="tickets" class="py-20 px-6 bg-blue-50">
-        <div class="container mx-auto max-w-5xl">
-          <h2
-            class="font-title text-5xl md:text-6xl text-center text-blue-800 mb-12"
-          >
-            Escolha seu Lugar no Sonho
-          </h2>
-          <div class="grid md:grid-cols-1 gap-8">
-            <!-- Cartão de Bilhete 1 -->
-            <div
-              class="bg-white rounded-xl shadow-2xl p-8 text-center flex flex-col justify-between border-t-4 border-blue-400"
-            >
-              <div>
-                <h3 class="text-3xl font-bold text-blue-800 mb-2">
-                  Platéia Mágica
-                </h3>
-                <p class="text-gray-500 mb-6">
-                  Sinta a emoção das nossas pequenas bailarinas em cena.
-                </p>
-                <p class="text-5xl font-bold text-blue-600 mb-6">R$ 39,00</p>
-                <ul class="text-left space-y-3 mb-8">
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                    Visão do palco com assentos elevados e confortáveis!
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                    Equipe de fotografia profissional!
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                    Experiência imersiva!
-                  </li>
-                </ul>
-              </div>
-              <a
-                href="buy.html"
-                class="btn-magic w-full mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg"
-                >Comprar Agora</a
-              >
-            </div>
-            <!-- Cartão de Bilhete 2 -->
-            <!-- <div
-              class="bg-white rounded-xl shadow-2xl p-8 text-center flex flex-col justify-between border-t-4 border-indigo-400"
-            >
-              <div>
-                <h3 class="text-3xl font-bold text-indigo-800 mb-2">
-                  Balcão dos Sonhos
-                </h3>
-                <p class="text-gray-500 mb-6">
-                  Uma vista panorâmica de todo o encanto do espetáculo.
-                </p>
-                <p class="text-5xl font-bold text-indigo-600 mb-6">R$ 60</p>
-                <ul class="text-left space-y-3 mb-8">
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                    Excelente visibilidade
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                    Ótimo custo-benefício
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                    Perfeito para famílias
-                  </li>
-                </ul>
-              </div>
-              <a
-                href="#"
-                class="btn-magic w-full mt-4 inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-full text-lg"
-                >Comprar Agora</a
-              >
-            </div> -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Secção de FAQ -->
-      <section id="faq" class="py-20 px-6 bg-white">
-        <div class="container mx-auto max-w-3xl">
-          <h2
-            class="font-title text-5xl md:text-6xl text-center text-blue-800 mb-12"
-          >
-            Perguntas Frequentes
-          </h2>
-          <div class="space-y-4">
-            <div
-              class="faq-item bg-gray-50 rounded-lg p-6 border border-gray-200"
-            >
-              <div
-                class="faq-question flex justify-between items-center cursor-pointer"
-              >
-                <h4 class="text-lg font-semibold text-gray-800">
-                  Qual a classificação etária?
-                </h4>
-                <i
-                  class="fas fa-plus icon-plus text-blue-500 transition-transform duration-300"
-                ></i>
-              </div>
-              <p class="faq-answer mt-4 text-gray-600">
-                O espetáculo tem classificação livre e é recomendado para toda a
-                família.
-              </p>
-            </div>
-            <div
-              class="faq-item bg-gray-50 rounded-lg p-6 border border-gray-200"
-            >
-              <div
-                class="faq-question flex justify-between items-center cursor-pointer"
-              >
-                <h4 class="text-lg font-semibold text-gray-800">
-                  Qual a duração do espetáculo?
-                </h4>
-                <i
-                  class="fas fa-plus icon-plus text-blue-500 transition-transform duration-300"
-                ></i>
-              </div>
-              <p class="faq-answer mt-4 text-gray-600">
-                A apresentação dura aproximadamente 1 hora e 30 minutos, com um
-                intervalo de 15 minutos.
-              </p>
-            </div>
-            <!-- <div
-              class="faq-item bg-gray-50 rounded-lg p-6 border border-gray-200"
-            >
-              <div
-                class="faq-question flex justify-between items-center cursor-pointer"
-              >
-                <h4 class="text-lg font-semibold text-gray-800">
-                  O teatro possui acessibilidade?
-                </h4>
-                <i
-                  class="fas fa-plus icon-plus text-blue-500 transition-transform duration-300"
-                ></i>
-              </div>
-              <p class="faq-answer mt-4 text-gray-600">
-                Sim, o Teatro Barreto Júnior possui rampas de acesso e assentos
-                reservados para pessoas com deficiência. Por favor, entre em
-                contato para mais detalhes.
-              </p>
-            </div> -->
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Rodapé -->
-    <footer class="bg-blue-900 text-white py-12 px-6">
-      <div class="container mx-auto text-center">
-        <p class="font-title text-4xl mb-4">LeCorsaire Ballet</p>
-        <p class="mb-6">
-          Siga-nos nas redes sociais para mais novidades e fotos dos nossos
-          espetáculos!
-        </p>
-        <div class="flex justify-center space-x-6 mb-8">
-          <a
-            target="_blank"
-            href="https://www.instagram.com/lecorsaireballet/"
-            class="text-2xl hover:text-blue-300 transition-colors"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <!-- <a href="#" class="text-2xl hover:text-blue-300 transition-colors"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a href="#" class="text-2xl hover:text-blue-300 transition-colors"
-            ><i class="fab fa-youtube"></i
-          ></a> -->
-          <a
-            target="_blank"
-            href="https://wa.me/5581997438327?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20serviços."
-            class="text-2xl hover:text-blue-300 transition-colors"
-            ><i class="fab fa-whatsapp"></i
-          ></a>
-        </div>
-        <p class="text-sm text-blue-200">
-          &copy; 2025 LeCorsaire Ballet. Todos os direitos reservados.
-        </p>
       </div>
-    </footer>
+    </section>
 
-    <script>
-      // Lógica do Temporizador
-      const countdown = () => {
-        // Define a data para a contagem regressiva (15 de novembro de 2025)
-        const countDate = new Date("November 15, 2025 16:00:00").getTime();
-        const now = new Date().getTime();
-        const gap = countDate - now;
+    <!-- Secção de Aulas -->
+    <section id="classes" class="py-20 px-6">
+      <div class="container mx-auto">
+        <h2 class="font-serif text-4xl font-bold text-center text-pink-800 mb-12">Nossas Aulas</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card de Aula 1 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center transform hover:-translate-y-2 transition-transform">
+            <i class="fas fa-child text-4xl text-pink-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Baby Class</h3>
+            <p class="text-gray-600 text-sm">Para crianças de 3 a 5 anos. Uma introdução lúdica ao mundo do ballet.</p>
+          </div>
+          <!-- Card de Aula 2 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center transform hover:-translate-y-2 transition-transform">
+            <i class="fas fa-shoe-prints text-4xl text-pink-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Ballet Clássico</h3>
+            <p class="text-gray-600 text-sm">Técnica, postura e graciosidade. Turmas infantil, juvenil e adulto.</p>
+          </div>
+          <!-- Card de Aula 3 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center transform hover:-translate-y-2 transition-transform">
+            <i class="fas fa-hat-cowboy text-4xl text-pink-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Dança Contemporânea</h3>
+            <p class="text-gray-600 text-sm">Liberdade de movimento e expressão artística para jovens e adultos.</p>
+          </div>
+          <!-- Card de Aula 4 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center transform hover:-translate-y-2 transition-transform">
+            <i class="fas fa-person-walking text-4xl text-pink-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Ballet Adulto</h3>
+            <p class="text-gray-600 text-sm">Nunca é tarde para começar a dançar. Turmas para iniciantes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        // Cálculos de tempo
-        const second = 1000;
-        const minute = second * 60;
-        const hour = minute * 60;
-        const day = hour * 24;
+    <!-- Secção de Horários -->
+    <section id="schedule" class="py-20 px-6 bg-white">
+      <div class="container mx-auto">
+        <h2 class="font-serif text-4xl font-bold text-center text-pink-800 mb-12">Grade de Horários</h2>
+        <div class="overflow-x-auto shadow-md rounded-lg">
+          <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+              <tr>
+                <th scope="col" class="px-6 py-3">Aula</th>
+                <th scope="col" class="px-6 py-3">Segunda e Quarta</th>
+                <th scope="col" class="px-6 py-3">Terça e Quinta</th>
+                <th scope="col" class="px-6 py-3">Sexta</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white border-b">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Baby Class</th>
+                <td class="px-6 py-4">17:00 - 17:45</td>
+                <td class="px-6 py-4">09:00 - 09:45</td>
+                <td class="px-6 py-4">-</td>
+              </tr>
+              <tr class="bg-gray-50 border-b">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Ballet Infantil</th>
+                <td class="px-6 py-4">18:00 - 19:00</td>
+                <td class="px-6 py-4">10:00 - 11:00</td>
+                <td class="px-6 py-4">-</td>
+              </tr>
+              <tr class="bg-white border-b">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Ballet Juvenil</th>
+                <td class="px-6 py-4">19:00 - 20:15</td>
+                <td class="px-6 py-4">16:00 - 17:15</td>
+                <td class="px-6 py-4">18:00 - 19:30</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Ballet Adulto</th>
+                <td class="px-6 py-4">20:15 - 21:30</td>
+                <td class="px-6 py-4">19:00 - 20:15</td>
+                <td class="px-6 py-4">-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-        // Calcula os valores
-        const textDay = Math.floor(gap / day);
-        const textHour = Math.floor((gap % day) / hour);
-        const textMinute = Math.floor((gap % hour) / minute);
-        const textSecond = Math.floor((gap % minute) / second);
+    <!-- Secção de Contato -->
+    <section id="contact" class="py-20 px-6">
+      <div class="container mx-auto grid lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-serif text-4xl font-bold text-pink-800 mb-6">Entre em Contato</h2>
+          <p class="text-gray-600 mb-8">Agende uma aula experimental ou tire as suas dúvidas. Estamos ansiosos para receber você!</p>
+          <form action="#" method="POST">
+            <div class="mb-4">
+              <label for="name" class="block text-gray-700 font-bold mb-2">Nome</label>
+              <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+              <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-gray-700 font-bold mb-2">Mensagem</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition-colors">
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl h-full min-h-[400px]">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.045320516867!2d-34.89115232575727!3d-8.09705998090578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1f3d17a80309%3A0x4de03a2164433146!2sTeatro%20Barreto%20J%C3%BAnior!5e0!3m2!1spt-BR!2sbr!4v1721787999516!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        // Atualiza o HTML
-        document.getElementById("days").innerText = textDay > 0 ? textDay : 0;
-        document.getElementById("hours").innerText =
-          textHour > 0 ? textHour : 0;
-        document.getElementById("minutes").innerText =
-          textMinute > 0 ? textMinute : 0;
-        document.getElementById("seconds").innerText =
-          textSecond > 0 ? textSecond : 0;
-      };
+  <!-- Rodapé -->
+  <footer class="bg-gray-800 text-white py-12 px-6">
+    <div class="container mx-auto text-center">
+      <p class="font-serif text-3xl mb-4">Academia de Ballet Sonhos em Ponta</p>
+      <p class="mb-6">Rua da Dança, 123 - Pina, Recife - PE</p>
+      <div class="flex justify-center space-x-6 mb-8">
+        <a href="#" class="text-2xl hover:text-pink-400 transition-colors"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-2xl hover:text-pink-400 transition-colors"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-2xl hover:text-pink-400 transition-colors"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p class="text-sm text-gray-400">&copy; 2025 Academia Sonhos em Ponta. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
-      // Executa o temporizador a cada segundo
-      setInterval(countdown, 1000);
+  <script>
+    // Lógica para o menu mobile
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-      // Lógica do Acordeão de FAQ
-      document.querySelectorAll(".faq-question").forEach((button) => {
-        button.addEventListener("click", () => {
-          const faqItem = button.parentElement;
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
-          // Fecha todos os outros itens
-          document.querySelectorAll(".faq-item").forEach((item) => {
-            if (item !== faqItem && item.classList.contains("open")) {
-              item.classList.remove("open");
-            }
-          });
+</body>
 
-          // Alterna o item clicado
-          faqItem.classList.toggle("open");
-        });
-      });
-
-      // Rolagem suave para links âncora
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-      });
-    </script>
-  </body>
 </html>
