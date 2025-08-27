@@ -3,9 +3,17 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+// Route::get('/', function () {
+//     return Inertia::render('welcome');
+// })->name('home');
+
 Route::get('/', function () {
-    return Inertia::render('welcome');
-})->name('home');
+  return view('index');
+})->name('index');
+
+Route::get('/buy', function () {
+  return view('buy');
+})->name('buy');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
